@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(bodyParser.json());
 const productRoutes = require('./api/routes/product');
+const userRoutes = require('./api/routes/user');
 
 app.use('/products', productRoutes);
+app.use('/users' ,userRoutes);
 
 module.exports = app;

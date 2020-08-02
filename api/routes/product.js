@@ -22,6 +22,7 @@ router.post('/product/save', (req,res)=>{
         _id:mongoose.Types.ObjectId(),
         name:req.body.name,
         price:req.body.price,
+<<<<<<< Updated upstream
     });
     product.save().then(res=>{
         console.log(res);
@@ -34,7 +35,15 @@ res.status(201).json({
 router.patch('/update', (req,res)=>{
     res.status(201).json({
        message:'It is a patch method'
+=======
+>>>>>>> Stashed changes
     });
+    product.save().then(res=>{
+        console.log(res);
+    })
+res.status(201).json({
+    createdProduct:product,
+})
 })
 
 
